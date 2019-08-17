@@ -3,7 +3,7 @@
           package="ru.zavanton.unicorn.auth">
 
     <application>
-        <activity android:name=".TokenActivity">
+        <activity android:name=".ui.TokenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
 

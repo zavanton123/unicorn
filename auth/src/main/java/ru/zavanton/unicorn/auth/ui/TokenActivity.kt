@@ -1,9 +1,8 @@
-package ru.zavanton.unicorn.auth
+package ru.zavanton.unicorn.auth.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Base64
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.Call
 import okhttp3.Callback
@@ -14,17 +13,15 @@ import okhttp3.RequestBody
 import okhttp3.Response
 import org.json.JSONException
 import org.json.JSONObject
+import ru.zavanton.unicorn.auth.R
+import ru.zavanton.unicorn.auth.utils.AuthConstants.ACCESS_TOKEN_URL
+import ru.zavanton.unicorn.auth.utils.AuthConstants.CLIENT_ID
+import ru.zavanton.unicorn.auth.utils.AuthConstants.REDIRECT_URI
+import ru.zavanton.unicorn.auth.utils.AuthConstants.STATE
+import ru.zavanton.unicorn.utils.Log
 import java.io.IOException
 
 class TokenActivity : AppCompatActivity() {
-
-    private val CLIENT_ID = "yrTRBe2U2sH4nw"
-
-    private val REDIRECT_URI = "http://unicorn.zavanton.tmweb.ru/about/"
-
-    private val STATE = "MY_RANDOM_STRING_3"
-
-    private val ACCESS_TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,13 +30,13 @@ class TokenActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Log.d("zavanton", "zavanton - TokenActivity onResume")
+        Log.d("zavanton - TokenActivity onResume")
 
         if (intent != null && intent.action == Intent.ACTION_VIEW) {
             val uri = intent.data
             if (uri!!.getQueryParameter("error") != null) {
                 val error = uri.getQueryParameter("error")
-                Log.e("zavanton", "zavanton - An error has occurred : " + error!!)
+                Log.d("zavanton - An error has occurred : " + error!!)
             } else {
                 val state = uri.getQueryParameter("state")
                 if (state == STATE) {
@@ -75,8 +72,7 @@ class TokenActivity : AppCompatActivity() {
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                Log.e("zavanton", "zavanton - ERROR: $e")
-
+                Log.e(e, "zavanton - ERROR")
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -88,8 +84,8 @@ class TokenActivity : AppCompatActivity() {
                     val accessToken = data.optString("access_token")
                     val refreshToken = data.optString("refresh_token")
 
-                    Log.d("zavanton", "Access Token = $accessToken")
-                    Log.d("zavanton", "Refresh Token = $refreshToken")
+                    Log.d("Access Token = $accessToken")
+                    Log.d("Refresh Token = $refreshToken")
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
