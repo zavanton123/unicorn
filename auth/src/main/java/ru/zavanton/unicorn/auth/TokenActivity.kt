@@ -1,4 +1,4 @@
-package ru.zavanton.unicorn
+package ru.zavanton.unicorn.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +16,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 
-class DemoActivity : AppCompatActivity() {
+class TokenActivity : AppCompatActivity() {
 
     private val CLIENT_ID = "yrTRBe2U2sH4nw"
 
@@ -28,12 +28,12 @@ class DemoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_demo)
+        setContentView(R.layout.activity_token)
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("zavanton", "zavanton - DemoActivity onResume")
+        Log.d("zavanton", "zavanton - TokenActivity onResume")
 
         if (intent != null && intent.action == Intent.ACTION_VIEW) {
             val uri = intent.data

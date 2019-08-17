@@ -37,11 +37,4 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        Log.d("zavanton", "zavanton - MainActivity onResume")
-    }
-
-
 }
