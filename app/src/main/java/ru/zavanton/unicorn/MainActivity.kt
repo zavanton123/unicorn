@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.zavanton.unicorn.posts.PostsActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnLogin.setOnClickListener {
-            startSignIn()
+            // startSignIn()
+            goToPosts()
+        }
+    }
+
+    private fun goToPosts() {
+        Intent(this, PostsActivity::class.java).apply {
+            startActivity(this)
         }
     }
 
