@@ -1,4 +1,4 @@
-package ru.zavanton.unicorn.utils;
+package ru.zavanton.unicorn.core;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("ru.zavanton.unicorn.utils.test", appContext.getPackageName());
+        assertEquals("ru.zavanton.unicorn.core.test", appContext.getPackageName());
     }
 }

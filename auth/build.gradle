@@ -40,6 +40,7 @@ dependencies {
     // AndroidX
     implementation androidx.appcompet
     implementation androidx.core_ktx
+    implementation androidx.constraintlayout
 
     // ViewModel and LiveData
     implementation architecture_components.lifecycle_extensions

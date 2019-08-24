@@ -1,4 +1,4 @@
-package ru.zavanton.unicorn.utils
+package ru.zavanton.unicorn.core
 
 import android.util.Log
 import java.util.regex.Pattern

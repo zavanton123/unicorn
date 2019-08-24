@@ -1,4 +1,4 @@
-package ru.zavanton.unicorn.utils;
+package ru.zavanton.unicorn.core;
 
 import org.junit.Test;
 

@@ -3,11 +3,16 @@ package ru.zavanton.unicorn.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import okhttp3.OkHttpClient
 import ru.zavanton.unicorn.R
+import ru.zavanton.unicorn.auth.di.AuthApi
+import ru.zavanton.unicorn.auth.ui.TokenActivity
+import ru.zavanton.unicorn.di.ComponentManager
 import ru.zavanton.unicorn.posts.PostsActivity
+import ru.zavanton.unicorn.core.Log
+import javax.inject.Inject
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,9 +27,16 @@ class MainActivity : AppCompatActivity() {
 
     private val STATE = "MY_RANDOM_STRING_3"
 
+    @Inject
+    lateinit var okHttpClient: OkHttpClient
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        ComponentManager.getAppComponent().inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Log.d("okHttpClient: $okHttpClient")
 
         btnLogin.setOnClickListener {
             // startSignIn()
@@ -40,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun startSignIn() {
         val url = String.format(AUTH_URL, CLIENT_ID, STATE, REDIRECT_URI)
-        Log.d("zavanton", "zavanton - url: $url")
+        Log.d("zavanton - url: $url")
 
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         startActivity(intent)

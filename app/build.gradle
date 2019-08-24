@@ -26,15 +26,17 @@ android {
 dependencies {
 
     // Import android modules
-    implementation project(':core')
+    implementation project(":core")
     implementation project(":auth")
     implementation project(":posts")
+
     // Kotlin
     implementation kotlin.core
 
     // AndroidX
     implementation androidx.appcompet
     implementation androidx.core_ktx
+    implementation androidx.constraintlayout
 
     // ViewModel and LiveData
     implementation architecture_components.lifecycle_extensions
