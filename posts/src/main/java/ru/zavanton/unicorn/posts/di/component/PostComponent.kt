@@ -7,25 +7,25 @@ import javax.inject.Scope
 
 @Scope
 @Retention
-annotation class PostsScope
+annotation class PostScope
 
-@PostsScope
+@PostScope
 @Component(
     modules = [
-        PostsModule::class
+        PostModule::class
     ],
     dependencies = [
         CoreApi::class
     ]
 )
-interface PostsComponent {
+interface PostComponent {
 
     // Subcomponents
-    fun plusPostsActivityComponent(): PostsActivityComponent
+    fun plusPostActivityComponent(): PostActivityComponent
 }
 
 @Module
-class PostsModule
+class PostModule
 
 
 

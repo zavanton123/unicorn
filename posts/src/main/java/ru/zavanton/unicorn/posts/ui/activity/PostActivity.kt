@@ -6,16 +6,16 @@ import okhttp3.OkHttpClient
 import ru.zavanton.unicorn.core.Log
 import ru.zavanton.unicorn.posts.R
 import ru.zavanton.unicorn.posts.di.ComponentManager
-import ru.zavanton.unicorn.posts.ui.fragment.PostsFragment
+import ru.zavanton.unicorn.posts.ui.fragment.PostFragment
 import javax.inject.Inject
 
-class PostsActivity : AppCompatActivity() {
+class PostActivity : AppCompatActivity() {
 
     @Inject
     lateinit var okHttpClient: OkHttpClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        ComponentManager.getPostsActivityComponent().inject(this)
+        ComponentManager.getPostActivityComponent().inject(this)
 
         super.onCreate(savedInstanceState)
         Log.d()
@@ -31,7 +31,7 @@ class PostsActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .add(
                     R.id.fmtContainer,
-                    PostsFragment.newInstance()
+                    PostFragment.newInstance()
                 )
                 .commit()
         }

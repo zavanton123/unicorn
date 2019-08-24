@@ -1,51 +1,52 @@
 package ru.zavanton.unicorn.posts.di
 
-import ru.zavanton.unicorn.posts.di.component.PostsActivityComponent
-import ru.zavanton.unicorn.posts.di.component.PostsComponent
-import ru.zavanton.unicorn.posts.di.component.PostsFragmentComponent
+import ru.zavanton.unicorn.posts.di.component.DaggerPostComponent
+import ru.zavanton.unicorn.posts.di.component.PostActivityComponent
+import ru.zavanton.unicorn.posts.di.component.PostComponent
+import ru.zavanton.unicorn.posts.di.component.PostFragmentComponent
 import ru.zavanton.unicorn.core.di.ComponentManager as CoreComponentManager
 
 object ComponentManager {
 
     private var coreComponentManager = CoreComponentManager
-    private var postsComponent: PostsComponent? = null
-    private var postsActivityComponent: PostsActivityComponent? = null
-    private var postsFragmentComponent: PostsFragmentComponent? = null
+    private var postComponent: PostComponent? = null
+    private var postActivityComponent: PostActivityComponent? = null
+    private var postFragmentComponent: PostFragmentComponent? = null
 
-    fun getPostsComponent(): PostsComponent =
-        postsComponent ?: DaggerPostsComponent
+    fun getPostComponent(): PostComponent =
+        postComponent ?: DaggerPostComponent
             .builder()
             .coreApi(coreComponentManager.getCoreComponent())
             .build()
             .also {
-                postsComponent = it
+                postComponent = it
             }
 
-    fun clearPostsComponent() {
-        postsActivityComponent = null
-        postsComponent = null
+    fun clearPostComponent() {
+        postActivityComponent = null
+        postComponent = null
     }
 
-    fun getPostsActivityComponent(): PostsActivityComponent =
-        postsActivityComponent ?: getPostsComponent()
-            .plusPostsActivityComponent()
+    fun getPostActivityComponent(): PostActivityComponent =
+        postActivityComponent ?: getPostComponent()
+            .plusPostActivityComponent()
             .also {
-                postsActivityComponent = it
+                postActivityComponent = it
             }
 
-    fun clearPostsActivityComponent() {
-        postsActivityComponent = null
+    fun clearPostActivityComponent() {
+        postActivityComponent = null
     }
 
-    fun getPostsFragmentComponent(): PostsFragmentComponent {
-        return postsFragmentComponent ?: getPostsActivityComponent()
-            .plusPostsFragmentComponent()
+    fun getPostFragmentComponent(): PostFragmentComponent {
+        return postFragmentComponent ?: getPostActivityComponent()
+            .plusPostFragmentComponent()
             .also {
-                postsFragmentComponent = it
+                postFragmentComponent = it
             }
     }
 
-    fun clearPostsFragmentComponent() {
-        postsFragmentComponent = null
+    fun clearPostFragmentComponent() {
+        postFragmentComponent = null
     }
 }

@@ -11,19 +11,19 @@ import ru.zavanton.unicorn.posts.R
 import ru.zavanton.unicorn.posts.di.ComponentManager
 import javax.inject.Inject
 
-class PostsFragment : Fragment() {
+class PostFragment : Fragment() {
 
     @Inject
     lateinit var okHttpClient: OkHttpClient
 
     companion object {
 
-        fun newInstance(): PostsFragment =
-            PostsFragment()
+        fun newInstance(): PostFragment =
+            PostFragment()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        ComponentManager.getPostsFragmentComponent().inject(this)
+        ComponentManager.getPostFragmentComponent().inject(this)
         super.onCreate(savedInstanceState)
 
         Log.d("okHttpClient: $okHttpClient")

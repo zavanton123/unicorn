@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
 import ru.zavanton.unicorn.R
 import ru.zavanton.unicorn.di.ComponentManager
-import ru.zavanton.unicorn.posts.ui.activity.PostsActivity
+import ru.zavanton.unicorn.posts.ui.activity.PostActivity
 import ru.zavanton.unicorn.core.Log
 import javax.inject.Inject
 
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToPosts() {
-        Intent(this, PostsActivity::class.java).apply {
+        Intent(this, PostActivity::class.java).apply {
             startActivity(this)
         }
     }
