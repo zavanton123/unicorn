@@ -1,4 +1,4 @@
 include ':app',
         ':posts',
         ':auth',
-        ':utils'
+        ':core'
