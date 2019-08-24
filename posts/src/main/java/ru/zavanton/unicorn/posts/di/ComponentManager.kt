@@ -9,6 +9,7 @@ import ru.zavanton.unicorn.core.di.ComponentManager as CoreComponentManager
 object ComponentManager {
 
     private var coreComponentManager = CoreComponentManager
+
     private var postComponent: PostComponent? = null
     private var postActivityComponent: PostActivityComponent? = null
     private var postFragmentComponent: PostFragmentComponent? = null

@@ -5,6 +5,7 @@ import ru.zavanton.unicorn.core.di.ComponentManager as CoreComponentManager
 object ComponentManager {
 
     private var coreComponentManager = CoreComponentManager
+
     private var authComponent: AuthComponent? = null
 
     fun getAuthComponent(): AuthComponent =

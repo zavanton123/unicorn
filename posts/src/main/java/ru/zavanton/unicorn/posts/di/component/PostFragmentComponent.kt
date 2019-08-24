@@ -1,8 +1,17 @@
 package ru.zavanton.unicorn.posts.di.component
 
+import androidx.lifecycle.ViewModelProvider
+import dagger.Binds
 import dagger.Module
 import dagger.Subcomponent
+import ru.zavanton.unicorn.posts.business.interactor.IPostInteractor
+import ru.zavanton.unicorn.posts.business.interactor.PostInteractor
+import ru.zavanton.unicorn.posts.data.repository.IPostRepository
+import ru.zavanton.unicorn.posts.data.repository.PostRepository
 import ru.zavanton.unicorn.posts.ui.fragment.PostFragment
+import ru.zavanton.unicorn.posts.ui.viewModel.PostFragmentViewModelFactory
+import ru.zavanton.unicorn.posts.ui.viewModel.IPostFragmentViewModel
+import ru.zavanton.unicorn.posts.ui.viewModel.PostFragmentViewModel
 import javax.inject.Scope
 
 @Scope
@@ -12,7 +21,7 @@ annotation class PostFragmentScope
 @PostFragmentScope
 @Subcomponent(
     modules = [
-        PostFragmentModule::class
+        BindsPostFragmentModule::class
     ]
 )
 interface PostFragmentComponent {
@@ -21,4 +30,17 @@ interface PostFragmentComponent {
 }
 
 @Module
-class PostFragmentModule
+interface BindsPostFragmentModule {
+
+    @Binds
+    fun provideViewModelProviderFactory(impl: PostFragmentViewModelFactory): ViewModelProvider.Factory
+
+    @Binds
+    fun providePostFragmentViewModel(impl: PostFragmentViewModel): IPostFragmentViewModel
+
+    @Binds
+    fun providePostInteractor(impl: PostInteractor): IPostInteractor
+
+    @Binds
+    fun providePostRepository(impl: PostRepository): IPostRepository
+}
