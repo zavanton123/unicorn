@@ -7,10 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
 import ru.zavanton.unicorn.R
-import ru.zavanton.unicorn.auth.di.AuthApi
-import ru.zavanton.unicorn.auth.ui.TokenActivity
 import ru.zavanton.unicorn.di.ComponentManager
-import ru.zavanton.unicorn.posts.PostsActivity
+import ru.zavanton.unicorn.posts.ui.activity.PostsActivity
 import ru.zavanton.unicorn.core.Log
 import javax.inject.Inject
 

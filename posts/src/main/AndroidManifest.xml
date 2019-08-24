@@ -3,7 +3,7 @@
           package="ru.zavanton.unicorn.posts">
 
     <application>
-        <activity android:name=".PostsActivity">
+        <activity android:name=".ui.activity.PostsActivity">
         </activity>
     </application>
 
