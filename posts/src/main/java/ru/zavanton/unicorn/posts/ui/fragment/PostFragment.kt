@@ -10,8 +10,9 @@ import androidx.lifecycle.ViewModelProviders
 import ru.zavanton.unicorn.core.Log
 import ru.zavanton.unicorn.posts.R
 import ru.zavanton.unicorn.posts.di.ComponentManager
-import ru.zavanton.unicorn.posts.ui.viewModel.IPostFragmentViewModel
-import ru.zavanton.unicorn.posts.ui.viewModel.PostFragmentViewModel
+import ru.zavanton.unicorn.posts.di.component.PostFragmentViewModelFactoryQualifier
+import ru.zavanton.unicorn.posts.ui.fragment.viewModel.IPostFragmentViewModel
+import ru.zavanton.unicorn.posts.ui.fragment.viewModel.PostFragmentViewModel
 import javax.inject.Inject
 
 class PostFragment : Fragment() {
@@ -22,6 +23,7 @@ class PostFragment : Fragment() {
     }
 
     @Inject
+    @field:PostFragmentViewModelFactoryQualifier
     lateinit var viewModelProviderFactory: ViewModelProvider.Factory
 
     private lateinit var viewModel: IPostFragmentViewModel

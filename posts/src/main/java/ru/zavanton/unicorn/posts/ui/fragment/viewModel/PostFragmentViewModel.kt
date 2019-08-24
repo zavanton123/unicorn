@@ -1,4 +1,4 @@
-package ru.zavanton.unicorn.posts.ui.viewModel
+package ru.zavanton.unicorn.posts.ui.fragment.viewModel
 
 import androidx.lifecycle.ViewModel
 import ru.zavanton.unicorn.core.Log
