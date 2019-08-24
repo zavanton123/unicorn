@@ -3,11 +3,14 @@ package ru.zavanton.unicorn.posts.di.component
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.Subcomponent
+import retrofit2.Retrofit
 import ru.zavanton.unicorn.posts.business.interactor.IPostInteractor
 import ru.zavanton.unicorn.posts.business.interactor.PostInteractor
 import ru.zavanton.unicorn.posts.data.repository.IPostRepository
 import ru.zavanton.unicorn.posts.data.repository.PostRepository
+import ru.zavanton.unicorn.posts.data.service.PostService
 import ru.zavanton.unicorn.posts.ui.fragment.PostFragment
 import ru.zavanton.unicorn.posts.ui.fragment.viewModel.IPostFragmentViewModel
 import ru.zavanton.unicorn.posts.ui.fragment.viewModel.PostFragmentViewModel
@@ -26,12 +29,21 @@ annotation class PostFragmentViewModelFactoryQualifier
 @PostFragmentScope
 @Subcomponent(
     modules = [
+        ProvidesPostFragmentModule::class,
         BindsPostFragmentModule::class
     ]
 )
 interface PostFragmentComponent {
 
     fun inject(fragment: PostFragment)
+}
+
+@Module
+class ProvidesPostFragmentModule {
+
+    @PostFragmentScope
+    @Provides
+    fun providePostService(retrofit: Retrofit): PostService = retrofit.create(PostService::class.java)
 }
 
 @Module
