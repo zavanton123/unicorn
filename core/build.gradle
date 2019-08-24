@@ -1,13 +1,12 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply from: '../versions.gradle'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
-
 
     defaultConfig {
         minSdkVersion 15
@@ -16,7 +15,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -25,14 +23,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    // Import android modules
-    implementation project(':core')
 
     // Kotlin
     implementation kotlin.core
@@ -86,4 +80,8 @@ dependencies {
     androidTestImplementation espresso.web
     androidTestImplementation espresso.idling_concurrent
     implementation espresso.idling_resource
+
+}
+repositories {
+    mavenCentral()
 }

@@ -1,0 +1,221 @@
+{
+  "kind": "Listing",
+  "data": {
+    "modhash": "",
+    "dist": 1,
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "approved_at_utc": null,
+          "subreddit": "gifs",
+          "selftext": "",
+          "author_fullname": "t2_nwmj6",
+          "saved": false,
+          "mod_reason_title": null,
+          "gilded": 0,
+          "clicked": false,
+          "title": "What really happened to the dinosaurs",
+          "link_flair_richtext": [],
+          "subreddit_name_prefixed": "r/gifs",
+          "hidden": false,
+          "pwls": 6,
+          "link_flair_css_class": "",
+          "downs": 0,
+          "thumbnail_height": 78,
+          "hide_score": false,
+          "name": "t3_cus4tw",
+          "quarantine": false,
+          "link_flair_text_color": "dark",
+          "author_flair_background_color": null,
+          "subreddit_type": "public",
+          "ups": 15159,
+          "total_awards_received": 0,
+          "media_embed": {},
+          "thumbnail_width": 140,
+          "author_flair_template_id": null,
+          "is_original_content": false,
+          "user_reports": [],
+          "secure_media": null,
+          "is_reddit_media_domain": false,
+          "is_meta": false,
+          "category": null,
+          "secure_media_embed": {},
+          "link_flair_text": "How Ridiculous",
+          "can_mod_post": false,
+          "score": 15159,
+          "approved_by": null,
+          "thumbnail": "https://b.thumbs.redditmedia.com/70hLZhhDYSzIatZ13BhTzb3-CtuDodF__Tk4XShLkcc.jpg",
+          "edited": false,
+          "author_flair_css_class": null,
+          "author_flair_richtext": [],
+          "gildings": {},
+          "post_hint": "link",
+          "content_categories": null,
+          "is_self": false,
+          "mod_note": null,
+          "created": 1566673906.0,
+          "link_flair_type": "text",
+          "wls": 6,
+          "banned_by": null,
+          "author_flair_type": "text",
+          "domain": "i.imgur.com",
+          "allow_live_comments": true,
+          "selftext_html": null,
+          "likes": null,
+          "suggested_sort": null,
+          "banned_at_utc": null,
+          "view_count": null,
+          "archived": false,
+          "no_follow": false,
+          "is_crosspostable": false,
+          "pinned": false,
+          "over_18": false,
+          "preview": {
+            "images": [
+              {
+                "source": {
+                  "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?format=png8&amp;s=ae5a48081b302a720543599c1abdf396e13270b6",
+                  "width": 728,
+                  "height": 408
+                },
+                "resolutions": [
+                  {
+                    "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=108&amp;crop=smart&amp;format=png8&amp;s=c2325fe54e33a48df4fac4add38b848555c3c89c",
+                    "width": 108,
+                    "height": 60
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=216&amp;crop=smart&amp;format=png8&amp;s=9cdf0bc37936e0f2caa23df03e05ca7ee6d20e79",
+                    "width": 216,
+                    "height": 121
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=320&amp;crop=smart&amp;format=png8&amp;s=5bcb6689529c33302426fbd28238dce407cf1e43",
+                    "width": 320,
+                    "height": 179
+                  },
+                  {
+                    "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=640&amp;crop=smart&amp;format=png8&amp;s=e9a5ba8963d4f0488a99b6f2f188f961a1fb9aaa",
+                    "width": 640,
+                    "height": 358
+                  }
+                ],
+                "variants": {
+                  "gif": {
+                    "source": {
+                      "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?s=3d5169d1a2b7d0767e4e514c3c47d2dd6498b62f",
+                      "width": 728,
+                      "height": 408
+                    },
+                    "resolutions": [
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=108&amp;crop=smart&amp;s=728ded9f4baa0b1aedee611b594624afb84cb921",
+                        "width": 108,
+                        "height": 60
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=216&amp;crop=smart&amp;s=9f39df74d337afcf05c59972f072cdf5bd74fa6b",
+                        "width": 216,
+                        "height": 121
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=320&amp;crop=smart&amp;s=b45ec80b7d5b3160e060e1683df264a66c6904b6",
+                        "width": 320,
+                        "height": 179
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=640&amp;crop=smart&amp;s=8239c06beaba17ed27d45c1b5ca54da414ff1cd8",
+                        "width": 640,
+                        "height": 358
+                      }
+                    ]
+                  },
+                  "mp4": {
+                    "source": {
+                      "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?format=mp4&amp;s=99bada96c09832dea04498240f08cf92b6247a51",
+                      "width": 728,
+                      "height": 408
+                    },
+                    "resolutions": [
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=108&amp;format=mp4&amp;s=25f945a49e50edbca38f95d6f5679dd59f5e568b",
+                        "width": 108,
+                        "height": 60
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=216&amp;format=mp4&amp;s=c15ba842a496fdcfe85794651177076289e2f757",
+                        "width": 216,
+                        "height": 121
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=320&amp;format=mp4&amp;s=e25487b423c7da3ca94dce88e33da13f5b97bd5a",
+                        "width": 320,
+                        "height": 179
+                      },
+                      {
+                        "url": "https://external-preview.redd.it/ObipTi-c7dinJyLTVyJij8s8XLED9BEPsvW9tjVNzlY.gif?width=640&amp;format=mp4&amp;s=67609470f804d4e4f59ecf38a7695b5fa5973f26",
+                        "width": 640,
+                        "height": 358
+                      }
+                    ]
+                  }
+                },
+                "id": "FdiBSGX66IOqASZ0WE7wxx6q8OF_P17rmfdAcMlU_K0"
+              }
+            ],
+            "reddit_video_preview": {
+              "fallback_url": "https://v.redd.it/rb2x3jmqqdi31/DASH_480",
+              "height": 480,
+              "width": 854,
+              "scrubber_media_url": "https://v.redd.it/rb2x3jmqqdi31/DASH_96",
+              "dash_url": "https://v.redd.it/rb2x3jmqqdi31/DASHPlaylist.mpd",
+              "duration": 16,
+              "hls_url": "https://v.redd.it/rb2x3jmqqdi31/HLSPlaylist.m3u8",
+              "is_gif": true,
+              "transcoding_status": "completed"
+            },
+            "enabled": true
+          },
+          "all_awardings": [],
+          "media_only": false,
+          "link_flair_template_id": "3e50b28c-5a72-11e6-8c88-0e37d60a8ddf",
+          "can_gild": false,
+          "spoiler": false,
+          "locked": false,
+          "author_flair_text": null,
+          "visited": false,
+          "num_reports": null,
+          "distinguished": null,
+          "subreddit_id": "t5_2qt55",
+          "mod_reason_by": null,
+          "removal_reason": null,
+          "link_flair_background_color": "",
+          "id": "cus4tw",
+          "is_robot_indexable": true,
+          "report_reasons": null,
+          "author": "Dlatrex",
+          "num_crossposts": 10,
+          "num_comments": 285,
+          "send_replies": true,
+          "whitelist_status": "all_ads",
+          "contest_mode": false,
+          "mod_reports": [],
+          "author_patreon_flair": false,
+          "author_flair_text_color": null,
+          "permalink": "/r/gifs/comments/cus4tw/what_really_happened_to_the_dinosaurs/",
+          "parent_whitelist_status": "all_ads",
+          "stickied": false,
+          "url": "https://i.imgur.com/8iwxK1B.gifv",
+          "subreddit_subscribers": 18929467,
+          "created_utc": 1566645106.0,
+          "discussion_type": null,
+          "media": null,
+          "is_video": false
+        }
+      }
+    ],
+    "after": "t3_cus4tw",
+    "before": null
+  }
+}

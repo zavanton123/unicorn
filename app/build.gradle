@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply from: '../versions.gradle'
 
 android {
     compileSdkVersion 29
@@ -25,16 +26,61 @@ android {
 dependencies {
 
     // Import android modules
-    implementation project(":utils")
+    implementation project(":core")
     implementation project(":auth")
+    implementation project(":posts")
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // Kotlin
+    implementation kotlin.core
+
+    // AndroidX
+    implementation androidx.appcompet
+    implementation androidx.core_ktx
+    implementation androidx.constraintlayout
+
+    // ViewModel and LiveData
+    implementation architecture_components.lifecycle_extensions
+    kapt architecture_components.lifecycle_compiler
+
+    // RxJava
+    implementation rxjava.core
+    implementation rxjava.android
+
+    // Dagger 2
+    implementation dagger.core
+    kapt dagger.compiler
+    implementation dagger.android
+    implementation dagger.android_support
+    kapt dagger.android_processor
+
+    // Retrofit
+    implementation retrofit.core
+    implementation retrofit.gson_converter
+    implementation retrofit.rxjava2_adapter
+
+    // OkHttp
+    implementation okhttp.core
+    implementation okhttp.loggint_interceptor
+
+    // JUnit5
+    testImplementation junit.junit_jupiter_api
+    testImplementation junit.junit_jupiter_params
+
+    // Truth
+    testImplementation truth.core
+    androidTestImplementation truth.core
+
+    // Android Testing Library
+    androidTestImplementation android_testing.runner
+    androidTestImplementation android_testing.rules
+
+    // Espresso UI Testing
+    androidTestImplementation espresso.core
+    androidTestImplementation espresso.contrib
+    androidTestImplementation espresso.intents
+    androidTestImplementation espresso.accessibility
+    androidTestImplementation espresso.web
+    androidTestImplementation espresso.idling_concurrent
+    implementation espresso.idling_resource
 
 }

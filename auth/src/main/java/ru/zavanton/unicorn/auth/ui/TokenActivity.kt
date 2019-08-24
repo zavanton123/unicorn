@@ -14,18 +14,27 @@ import okhttp3.Response
 import org.json.JSONException
 import org.json.JSONObject
 import ru.zavanton.unicorn.auth.R
+import ru.zavanton.unicorn.auth.di.ComponentManager
 import ru.zavanton.unicorn.auth.utils.AuthConstants.ACCESS_TOKEN_URL
 import ru.zavanton.unicorn.auth.utils.AuthConstants.CLIENT_ID
 import ru.zavanton.unicorn.auth.utils.AuthConstants.REDIRECT_URI
 import ru.zavanton.unicorn.auth.utils.AuthConstants.STATE
-import ru.zavanton.unicorn.utils.Log
+import ru.zavanton.unicorn.core.Log
 import java.io.IOException
+import javax.inject.Inject
 
 class TokenActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var okHttpClient: OkHttpClient
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        ComponentManager.getAuthComponent().inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_token)
+
+        Log.d("okHttpClient: $okHttpClient")
     }
 
     override fun onResume() {
