@@ -1,9 +1,8 @@
-package ru.zavanton.unicorn.posts.di
+package ru.zavanton.unicorn.posts.di.component
 
 import dagger.Component
 import dagger.Module
 import ru.zavanton.unicorn.core.di.CoreApi
-import ru.zavanton.unicorn.posts.ui.activity.PostsActivity
 import javax.inject.Scope
 
 @Scope

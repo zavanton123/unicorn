@@ -1,5 +1,8 @@
 package ru.zavanton.unicorn.posts.di
 
+import ru.zavanton.unicorn.posts.di.component.PostsActivityComponent
+import ru.zavanton.unicorn.posts.di.component.PostsComponent
+import ru.zavanton.unicorn.posts.di.component.PostsFragmentComponent
 import ru.zavanton.unicorn.core.di.ComponentManager as CoreComponentManager
 
 object ComponentManager {
@@ -7,6 +10,7 @@ object ComponentManager {
     private var coreComponentManager = CoreComponentManager
     private var postsComponent: PostsComponent? = null
     private var postsActivityComponent: PostsActivityComponent? = null
+    private var postsFragmentComponent: PostsFragmentComponent? = null
 
     fun getPostsComponent(): PostsComponent =
         postsComponent ?: DaggerPostsComponent
@@ -31,5 +35,17 @@ object ComponentManager {
 
     fun clearPostsActivityComponent() {
         postsActivityComponent = null
+    }
+
+    fun getPostsFragmentComponent(): PostsFragmentComponent {
+        return postsFragmentComponent ?: getPostsActivityComponent()
+            .plusPostsFragmentComponent()
+            .also {
+                postsFragmentComponent = it
+            }
+    }
+
+    fun clearPostsFragmentComponent() {
+        postsFragmentComponent = null
     }
 }

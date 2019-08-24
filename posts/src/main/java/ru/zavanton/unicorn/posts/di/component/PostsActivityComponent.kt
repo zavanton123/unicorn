@@ -1,4 +1,4 @@
-package ru.zavanton.unicorn.posts.di
+package ru.zavanton.unicorn.posts.di.component
 
 import dagger.Module
 import dagger.Subcomponent
@@ -16,6 +16,9 @@ annotation class PostsActivityScope
     ]
 )
 interface PostsActivityComponent {
+
+    // Subcomponents
+    fun plusPostsFragmentComponent(): PostsFragmentComponent
 
     fun inject(postsActivity: PostsActivity)
 }
